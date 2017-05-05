@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Twitter Rest Api's</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/twitter.js"></script>
+    <style>
+        .apiDivs {
+            background-color: darkgray;
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        .response {
+            background-color: white;
+            text-align: left
+        }
+    </style>
+</head>
+<body style="text-align: center">
+<h1>Twitter REST API's</h1>
+<div class="apiDivs">
+    <h2>Get Tweets</h2>
+    <button type="button" name="Get Tweets" onclick="getTweets()">Get Tweets</button>
+    <pre id="tweets" class="response"></pre>
+</div>
+<br/>
+<div class="apiDivs">
+    <h2>Get Users</h2>
+    <button type="button" name="Get Tweets" onclick="getUsers()">Get Users</button>
+    <pre id="users" class="response"></pre>
+</div>
+<br/>
+<div class="apiDivs">
+    <h2>External Links in Tweets</h2>
+    <button type="button" name="Get Tweets" onclick="getLinksInTweets()">Get External Links in Tweets</button>
+    <pre id="links" class="response"></pre>
+</div>
+<br/>
+<div class="apiDivs">
+    <h2>Get Tweet by Id</h2>
+    <label for="screen_name">Tweet_ID: </label><input id="tweet_id" type="text" >
+    <button type="button" name="Get Tweets" onclick="getTweetById()">Get Tweet by Id</button>
+    <pre id="tweetById" class="response"></pre>
+</div>
+<br/>
+<div class="apiDivs">
+    <h2>Get User by Screen Name</h2>
+    <label for="screen_name">Screen Name: </label><input id="screen_name" type="text" >
+    <button type="button" name="Get Tweets" onclick="getUserByScreenName()">Get User By Screen Name</button>
+    <pre id="userByName" class="response"></pre>
+</div>
+</body>
+</html>

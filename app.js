@@ -39,6 +39,12 @@ function traverse(tweet, external_links) {
 }
 
 app.use(cors());
+app.use(express.static(__dirname + '/public'));
+
+// default route will display index.html
+app.get('/', (req, res) => {
+    res.sendfile(__dirname + 'public/index.html');
+});
 
 // api to get tweet information
 app.get('/tweets', (req, res) => {
